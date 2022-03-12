@@ -21,8 +21,8 @@ const {
         const walletBalance = await connection.getBalance(
             new PublicKey(myWallet.publicKey)
          );
-         console.log(`=> For wallet address ${publicKey}`);
-        console.log(`   Wallet balance: ${parseInt(walletBalance)/LAMPORTS_PER_SOL}SOL`);
+         console.log(`=> For wallet address ${DzepEPWiVBKXSXdwhVJwjkkKaKqC3BBkV8X3NgETVBm9}`);
+        console.log(`   Wallet balance: ${parseInt(0)/LAMPORTS_PER_SOL}SOL`);
     } 
     catch (err) {
         console.log(err);
@@ -47,7 +47,7 @@ const airDropSol = async () => {
 const driverFunction = async()=>{
     await getWalletBalance();
     await airDropSol();
-    await getWalletBalance();
+    await getWalletBalance(1000);
 }
 
 driverFunction();
